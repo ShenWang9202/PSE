@@ -1,0 +1,162 @@
+[TITLE]
+
+[JUNCTIONS]
+ J2                                  700.0000
+
+[RESERVOIRS]
+ R1                                  700.0000 
+
+[TANKS]
+ T3                                  904.0000       4.0000       0.0000      20.0000      80.0000       0.0000 
+
+[PIPES]
+ 1                               J2                              T3                                 1000.0000      12.0000     100.0000       0.0000 
+
+[PUMPS]
+ 9                               R1                              J2                               HEAD pm4
+
+[VALVES]
+
+[DEMANDS]
+ J2                                  200.000000    1
+
+[EMITTERS]
+
+[STATUS]
+
+[PATTERNS]
+ 3                                     0.5000       1.3000       1.0000       1.2000
+ pr3                                   0.1200       0.2000       0.3000       0.4000
+ 1                                     0.5000       0.4000       0.3000       0.4500       0.5000       0.5000
+ 1                                     1.3000       1.2000       1.3000       1.1000       1.4000       1.3000
+ 1                                     0.9000       0.8000       1.0000       1.1000       0.9000       1.1000
+ 1                                     1.2000       1.2000       1.3000       1.1000       1.3000       1.1000
+
+[CURVES]
+ pm1                                 600.0000     150.0000
+ ef2                                   0.0000      40.0000
+ ef2                                 100.0000      52.2222
+ ef2                                 200.0000      62.2222
+ ef2                                 300.0000      70.0000
+ ef2                                 400.0000      75.5556
+ ef2                                 500.0000      78.8889
+ ef2                                 600.0000      80.0000
+ ef2                                 700.0000      78.8889
+ ef2                                 800.0000      75.5556
+ ef2                                 900.0000      70.0000
+ ef2                                1000.0000      62.2222
+ ef2                                1100.0000      52.2222
+ ef2                                1200.0000      40.0000
+ pm2                                 700.0000     250.0000
+ pm3                                   0.0000     295.2756
+ pm3                                 475.5112     229.6588
+ pm3                                 792.5186      98.4252
+ pm4                                   0.0000     393.7008
+ pm4                                 475.5112     360.8924
+ pm4                                1109.5261      98.4252
+
+[CONTROLS]
+ LINK 9 1.0000 AT TIME 0.0000 HOURS
+
+[QUALITY]
+
+[SOURCES]
+
+[MIXING]
+ T3                              MIXED          1.0000
+
+[REACTIONS]
+ ORDER  BULK            1.00
+ ORDER  WALL            1
+ ORDER  TANK            1.00
+ GLOBAL BULK            0.000000
+ GLOBAL WALL            0.000000
+
+[ENERGY]
+ GLOBAL PRICE        0.5000
+ GLOBAL PATTERN      pr3
+ GLOBAL EFFIC        75.0000
+ DEMAND CHARGE       0.0000
+ PUMP 9                               PATTERN pr3
+ PUMP 9                               EFFIC   ef2
+
+[TIMES]
+ DURATION            0:00:00
+ HYDRAULIC TIMESTEP  1:00:00
+ QUALITY TIMESTEP    0:05:00
+ REPORT TIMESTEP     1:00:00
+ REPORT START        0:00:00
+ PATTERN TIMESTEP    1:00:00
+ PATTERN START       0:00:00
+ RULE TIMESTEP       0:06:00
+ START CLOCKTIME     0:00:00
+ STATISTIC           NONE
+
+[OPTIONS]
+ UNITS               GPM
+ PRESSURE            PSI
+ HEADLOSS            H-W
+ PATTERN             1
+ UNBALANCED          CONTINUE 10
+ QUALITY             NONE
+ DEMAND MULTIPLIER   1.0000
+ EMITTER EXPONENT    0.5000
+ VISCOSITY           1.000000
+ DIFFUSIVITY         1.000000
+ SPECIFIC GRAVITY    1.000000
+ TRIALS              40
+ ACCURACY            0.00001000
+ TOLERANCE           0.01000000
+ CHECKFREQ           2
+ MAXCHECK            10
+ DAMPLIMIT           0.00000000
+
+[REPORT]
+ PAGESIZE            0
+ STATUS              FULL
+ SUMMARY             NO
+ ENERGY              NO
+ MESSAGES            YES
+ NODES               NONE
+ LINKS               NONE
+ Elevation           NO
+ Demand              PRECISION 2
+ Head                PRECISION 2
+ Pressure            PRECISION 2
+ Quality             NO
+ Length              NO
+ Diameter            NO
+ Flow                PRECISION 2
+ Velocity            PRECISION 2
+ Headloss            PRECISION 2
+ Quality             NO
+ State               NO
+ Setting             NO
+ Reaction            NO
+
+
+
+[COORDINATES]
+ J2                                 1214.380000    7243.020000
+ R1                                  404.760000    7238.100000
+ T3                                 1215.500000    7929.940000
+
+[TAGS]
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+ 222.22           7595.24          "Source"                 
+ 714.29           7587.30          "PUMP"                 
+ 971.34           8450.11          "TANK"                 
+
+[BACKDROP]
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+
+[END]

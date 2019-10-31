@@ -1,0 +1,95 @@
+  Page 1                                    Wed Sep  4 11:56:41 2019
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.1                            *
+  ******************************************************************
+  
+  Analysis begun Wed Sep  4 11:56:41 2019
+
+   
+  Hydraulic Status:
+  -----------------------------------------------------------------------
+     0:00:00: Balanced after 6 trials
+     0:00:00: Reservoir RESERVOIR-129 is emptying
+     0:00:00: Tank TANK-130 is emptying at 14.80 ft
+     0:00:00: Tank TANK-131 is filling at 10.00 ft
+   
+     1:00:00: Balanced after 4 trials
+     1:00:00: Tank TANK-130 is filling at 14.79 ft
+   
+     2:00:00: Balanced after 4 trials
+   
+     3:00:00: Balanced after 2 trials
+   
+     4:00:00: Balanced after 3 trials
+   
+     5:00:00: Balanced after 2 trials
+   
+     6:00:00: Balanced after 4 trials
+   
+     7:00:00: Balanced after 4 trials
+   
+     8:00:00: Balanced after 4 trials
+   
+     9:00:00: Pump PUMP-170 changed by timer control
+     9:00:00: Pump PUMP-172 changed by timer control
+     9:00:00: Balanced after 4 trials
+     9:00:00: Reservoir RESERVOIR-129 is closed
+     9:00:00: Tank TANK-130 is emptying at 15.92 ft
+     9:00:00: Tank TANK-131 is emptying at 14.21 ft
+     9:00:00: Pump PUMP-170 changed from open to closed
+     9:00:00: Pump PUMP-172 changed from open to closed
+   
+    10:00:00: Balanced after 4 trials
+   
+    11:00:00: Balanced after 4 trials
+   
+    12:00:00: Balanced after 4 trials
+   
+    13:00:00: Balanced after 4 trials
+   
+    14:00:00: Balanced after 4 trials
+   
+    15:00:00: Balanced after 4 trials
+   
+    16:00:00: Pump PUMP-170 changed by timer control
+    16:00:00: Pump PUMP-172 changed by timer control
+    16:00:00: Balanced after 32 trials
+    16:00:00: Reservoir RESERVOIR-129 is emptying
+    16:00:00: Tank TANK-130 is filling at 13.89 ft
+    16:00:00: Tank TANK-131 is filling at 12.81 ft
+    16:00:00: Pump PUMP-170 changed from closed to open
+    16:00:00: Pump PUMP-172 changed from closed to open
+   
+    17:00:00: Balanced after 4 trials
+   
+    18:00:00: Pump PUMP-170 changed by timer control
+    18:00:00: Pump PUMP-172 changed by timer control
+    18:00:00: Balanced after 5 trials
+    18:00:00: Reservoir RESERVOIR-129 is closed
+    18:00:00: Tank TANK-130 is emptying at 14.46 ft
+    18:00:00: Tank TANK-131 is emptying at 13.94 ft
+    18:00:00: Pump PUMP-170 changed from open to closed
+    18:00:00: Pump PUMP-172 changed from open to closed
+   
+    19:00:00: Balanced after 4 trials
+   
+    20:00:00: Balanced after 4 trials
+   
+    21:00:00: Balanced after 4 trials
+   
+    22:00:00: Balanced after 4 trials
+   
+    23:00:00: Balanced after 4 trials
+   
+    24:00:00: Pump PUMP-170 changed by timer control
+    24:00:00: Pump PUMP-172 changed by timer control
+    24:00:00: Balanced after 28 trials
+    24:00:00: Reservoir RESERVOIR-129 is emptying
+    24:00:00: Tank TANK-131 is filling at 13.15 ft
+    24:00:00: Pump PUMP-170 changed from closed to open
+    24:00:00: Pump PUMP-172 changed from closed to open
+   

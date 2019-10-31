@@ -1,0 +1,39 @@
+  Page 1                                    Mon Oct  7 18:40:37 2019
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.1                            *
+  ******************************************************************
+  
+  Analysis begun Mon Oct  7 18:40:37 2019
+
+   
+  Hydraulic Status:
+  -----------------------------------------------------------------------
+     0:00:00: Balanced after 6 trials
+     0:00:00: Reservoir 10 is emptying
+     0:00:00: Reservoir 65 is emptying
+     0:00:00: Reservoir 165 is emptying
+   
+     3:00:00: Balanced after 4 trials
+     3:00:00: Reservoir 65 is filling
+     3:00:00: Reservoir 165 is filling
+   
+     6:00:00: Balanced after 5 trials
+     6:00:00: Reservoir 65 is emptying
+     6:00:00: Reservoir 165 is emptying
+   
+     9:00:00: Balanced after 3 trials
+   
+    12:00:00: Balanced after 3 trials
+   
+    15:00:00: Balanced after 3 trials
+   
+    18:00:00: Balanced after 3 trials
+   
+    21:00:00: Balanced after 3 trials
+   
+    24:00:00: Balanced after 4 trials
+   

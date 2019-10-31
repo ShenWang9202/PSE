@@ -1,0 +1,256 @@
+[TITLE]
+ EPANET Example (BakRyun in Original)
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ 1               	24.90       	0.0         	                	;
+ 2               	29.90       	48.97       	                	;
+ 3               	31.40       	37.70       	                	;
+ 4               	40.77       	52.41       	                	;
+ 5               	24.30       	20.65       	                	;
+ 6               	28.00       	231.75      	                	;
+ 7               	22.40       	65.66       	                	;
+ 8               	31.40       	29.12       	                	;
+ 9               	21.90       	9.95        	                	;
+ 10              	17.60       	3.87        	                	;
+ 11              	17.80       	17.50       	                	;
+ 12              	22.90       	10.43       	                	;
+ 13              	14.10       	9.87        	                	;
+ 14              	17.40       	11.05       	                	;
+ 15              	19.40       	26.27       	                	;
+ 16              	17.10       	14.53       	                	;
+ 17              	19.90       	17.66       	                	;
+ 18              	20.60       	17.33       	                	;
+ 19              	36.40       	8.29        	                	;
+ 20              	23.50       	79.86       	                	;
+ 21              	26.30       	115.74      	                	;
+ 22              	34.30       	7.36        	                	;
+ 23              	20.80       	9.36        	                	;
+ 24              	26.30       	23.95       	                	;
+ 25              	15.40       	20.38       	                	;
+ 26              	11.40       	26.38       	                	;
+ 27              	11.40       	20.78       	                	;
+ 28              	11.10       	22.78       	                	;
+ 29              	10.50       	34.56       	                	;
+ 30              	11.60       	24.05       	                	;
+ 31              	25.20       	18.37       	                	;
+ 32              	12.90       	47.28       	                	;
+ 33              	12.90       	54.41       	                	;
+ 34              	18.20       	0.0         	                	;
+ 35              	25.20       	7.72        	                	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+ 99              	58.00       	                	;
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ 1               	99              	1               	200         	1100.0      	100         	0           	Open  	;
+ 2               	1               	2               	470         	1100.0      	100         	0           	Open  	;
+ 3               	2               	3               	80          	1100.0      	100         	0           	Open  	;
+ 4               	3               	4               	370         	900.0       	100         	0           	Open  	;
+ 5               	4               	6               	410         	900.0       	100         	0           	Open  	;
+ 6               	6               	7               	540         	800.0       	100         	0           	Open  	;
+ 7               	7               	11              	530         	600.0       	100         	0           	Open  	;
+ 8               	11              	16              	130         	500.0       	100         	0           	Open  	;
+ 9               	16              	17              	470         	500.0       	100         	0           	Open  	;
+ 10              	3               	4               	370         	600.0       	100         	0           	Open  	;
+ 11              	3               	5               	470         	100.0       	100         	0           	Open  	;
+ 12              	4               	5               	380         	100.0       	100         	0           	Open  	;
+ 13              	4               	6               	410         	600.0       	100         	0           	Open  	;
+ 14              	6               	7               	540         	600.0       	100         	0           	Open  	;
+ 15              	7               	8               	170         	200.0       	100         	0           	Open  	;
+ 16              	9               	8               	390         	80.0        	100         	0           	Open  	;
+ 17              	5               	9               	510         	150.0       	100         	0           	Open  	;
+ 18              	9               	10              	600         	150.0       	100         	0           	Open  	;
+ 19              	7               	11              	530         	600.0       	100         	0           	Open  	;
+ 20              	11              	16              	130         	600.0       	100         	0           	Open  	;
+ 21              	11              	12              	530         	400.0       	100         	0           	Open  	;
+ 22              	10              	15              	560         	150.0       	100         	0           	Open  	;
+ 23              	15              	14              	440         	400.0       	100         	0           	Open  	;
+ 24              	12              	14              	160         	400.0       	100         	0           	Open  	;
+ 25              	12              	13              	350         	150.0       	100         	0           	Open  	;
+ 26              	16              	13              	170         	150.0       	100         	0           	Open  	;
+ 27              	16              	19              	350         	200.0       	100         	0           	Open  	;
+ 28              	19              	20              	590         	100.0       	100         	0           	Open  	;
+ 29              	19              	18              	400         	80.0        	100         	0           	Open  	;
+ 30              	16              	17              	470         	600.0       	100         	0           	Open  	;
+ 31              	13              	27              	350         	100.0       	100         	0           	Open  	;
+ 32              	27              	14              	540         	300.0       	100         	0           	Open  	;
+ 33              	27              	26              	230         	100.0       	100         	0           	Open  	;
+ 34              	25              	26              	270         	100.0       	100         	0           	Open  	;
+ 35              	26              	28              	400         	100.0       	100         	0           	Open  	;
+ 36              	15              	28              	620         	150.0       	100         	0           	Open  	;
+ 37              	26              	29              	600         	100.0       	100         	0           	Open  	;
+ 38              	30              	29              	350         	400.0       	100         	0           	Open  	;
+ 39              	25              	30              	540         	700.0       	100         	0           	Open  	;
+ 40              	30              	35              	370         	450.0       	100         	0           	Open  	;
+ 41              	17              	25              	90          	700.0       	100         	0           	Open  	;
+ 42              	25              	31              	540         	100.0       	100         	0           	Open  	;
+ 43              	17              	18              	220         	700.0       	100         	0           	Open  	;
+ 44              	18              	24              	390         	700.0       	100         	0           	Open  	;
+ 45              	24              	23              	400         	700.0       	100         	0           	Open  	;
+ 46              	20              	24              	560         	80.0        	100         	0           	Open  	;
+ 47              	11              	20              	900         	500.0       	100         	0           	Open  	;
+ 48              	20              	21              	310         	500.0       	100         	0           	Open  	;
+ 49              	21              	23              	300         	300.0       	100         	0           	Open  	;
+ 50              	20              	23              	510         	400.0       	100         	0           	Open  	;
+ 51              	15              	22              	250         	700.0       	100         	0           	Open  	;
+ 52              	23              	32              	350         	300.0       	100         	0           	Open  	;
+ 53              	31              	32              	380         	100.0       	100         	0           	Open  	;
+ 54              	32              	33              	690         	200.0       	100         	0           	Open  	;
+ 55              	31              	35              	670         	200.0       	100         	0           	Open  	;
+ 56              	33              	34              	870         	200.0       	100         	0           	Open  	;
+ 57              	35              	34              	620         	200.0       	100         	0           	Open  	;
+ 58              	29              	22              	580         	400.0       	100         	0           	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0
+ Demand Charge      	0
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0
+ Global Wall           	0
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	0
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
+ Start ClockTime    	12 am
+ Statistic          	None
+
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	H-W
+ Specific Gravity   	1
+ Viscosity          	1
+ Trials             	40
+ Accuracy           	0.00001
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1.0
+ Emitter Exponent   	0.5
+ Quality            	None mg/L
+ Diffusivity        	1
+ Tolerance          	0.01
+
+[COORDINATES]
+;Node            	X-Coord         	Y-Coord
+ 1               	-2260.03        	6736.47         
+ 2               	-2260.03        	7905.76         
+ 3               	-881.33         	7923.21         
+ 4               	514.83          	7888.31         
+ 5               	-951.13         	6736.47         
+ 6               	1806.28         	7853.40         
+ 7               	1771.38         	6684.12         
+ 8               	1806.28         	5619.55         
+ 9               	-898.78         	5532.29         
+ 10              	-916.23         	4258.29         
+ 11              	3289.70         	6684.12         
+ 12              	3254.80         	5549.74         
+ 13              	4755.67         	5479.93         
+ 14              	3237.35         	4171.03         
+ 15              	1003.49         	2739.97         
+ 16              	4755.67         	6684.12         
+ 17              	6134.38         	6614.31         
+ 18              	6169.28         	7748.69         
+ 19              	4703.32         	7748.69         
+ 20              	4685.86         	8883.07         
+ 21              	6221.64         	9685.86         
+ 22              	986.04          	1553.23         
+ 23              	7757.42         	8917.98         
+ 24              	7739.97         	7731.24         
+ 25              	6099.48         	5427.57         
+ 26              	6134.38         	4240.84         
+ 27              	4703.32         	4153.58         
+ 28              	3184.99         	2670.16         
+ 29              	6134.38         	1535.78         
+ 30              	7757.42         	4258.29         
+ 31              	7739.97         	5532.29         
+ 32              	9450.26         	7766.14         
+ 33              	11090.75        	7766.14         
+ 34              	11125.65        	5532.29         
+ 35              	9380.45         	5479.93         
+ 99              	-2277.49        	5479.93         
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+ 3               	-811.52         	7923.21         
+ 4               	-218.15         	8342.06         
+ 5               	1125.65         	8307.16         
+ 6               	2207.68         	7347.29         
+ 7               	2696.34         	6963.35         
+ 8               	4109.95         	7015.71         
+ 9               	5471.20         	6876.09         
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+
+[BACKDROP]
+ DIMENSIONS     	-2947.65        	1128.28         	11795.81        	10093.36        
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
