@@ -56,7 +56,7 @@ end
 
 if(TestCase == 21)
     %inpname='tutorial5node.inp';
-    inpname='OBCL1.inp';
+    inpname='OBCL1_single.inp';
     acc = 1;
 end
 

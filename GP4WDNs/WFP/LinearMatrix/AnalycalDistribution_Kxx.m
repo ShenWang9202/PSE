@@ -53,13 +53,14 @@ end
 
 [A,A1,~] = Construct_H_Q_A_b_Pipe(MassEnergyMatrixStruct,ForConstructA,Demand_known,K_pipe,K_c,K_pump);
 %% remove 1.853 in K_pipe and verify the following
-% q = PipeFlow;
-% RealHeadloss = Headloss_pipe_R.* (q).^(1.852);
-% LinearHeadloss = K_pipe.*q./1.852;
-% b_pipe = RealHeadloss - LinearHeadloss;
-% b = [Demand_known;];
-% 
-% verify=A1*abs(deterministic(1:NumberofX));
+q = PipeFlow;
+Headloss_pipe_R = REstimateLinear(ForConstructb,deterministic);
+RealHeadloss = Headloss_pipe_R'.* (q).^(1.852);
+LinearHeadloss = K_pipe'.*q./1.852;
+b_pipe = RealHeadloss - LinearHeadloss;
+b = [Demand_known'];
+
+verify=A1*abs(deterministic(1:NumberofX));
 
 % profile clear
 % profile on
@@ -106,9 +107,11 @@ ReservoirHeadIndex = (BaseCount4Next + 1):(BaseCount4Next + ReservoirCount);
 [m,n_d]=size(demand_MC);
 [NumberofEq,NumberofX_A] = size(A);
 Kbb = zeros(NumberofEq,1);
-CoeffVariance
-DemandVariance
-TankErrorVariance
+% CoeffVariance
+% DemandVariance
+% TankErrorVariance
+
+
 
 Kbb(JunctionHeadIndex,:) = DemandVariance;
 Kbb(PipeFlowIndex,:) = (K_c').^2.*CoeffVariance;

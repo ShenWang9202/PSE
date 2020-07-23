@@ -80,7 +80,7 @@ legend(subplot2,'show');
 %%
 % Create subplot
 %f
-q_pump = 200:1400;
+q_pump = 0:1400;
 h_increase = -(h0 - r.*q_pump.^nu);
 newQ = ((h_increase + h0)./r).^(1/nu);
 newQ2 = ((h_increase + h0)./r).^(1/nu-1);

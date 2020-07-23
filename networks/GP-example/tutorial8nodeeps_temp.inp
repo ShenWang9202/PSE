@@ -1,0 +1,188 @@
+[TITLE]
+
+[JUNCTIONS]
+ J2                                  700.0000
+ J3                                  710.0000
+ J4                                  700.0000
+ J5                                  650.0000
+ J6                                  700.0000
+ J7                                  700.0000
+
+[RESERVOIRS]
+ R1                                  700.0000 
+
+[TANKS]
+ T8                                  830.0000       4.0000       0.0000      10.0000      60.0000       0.0000 
+
+[PIPES]
+ P1                              J2                              J3                                 3000.0000      14.0000     100.0000       0.0000 
+ P2                              J3                              J4                                 5000.0000       8.0000     100.0000       0.0000 
+ P3                              J4                              J5                                 5000.0000       6.0000     100.0000       0.0000 
+ P4                              J3                              J7                                 5000.0000      12.0000     100.0000       0.0000 
+ P5                              J4                              J6                                 5000.0000       8.0000     100.0000       0.0000 
+ P6                              J7                              J6                                 5000.0000       8.0000     100.0000       0.0000 
+ P7                              J5                              J6                                 7000.0000       6.0000     100.0000       0.0000 
+ P8                              J7                              T8                                 7000.0000      10.0000     100.0000       0.0000 
+
+[PUMPS]
+ PU9                             R1                              J2                               HEAD pm4
+
+[VALVES]
+
+[DEMANDS]
+ J2                                    0.000000    1
+ J3                                  150.000000    1
+ J4                                  150.000000    1
+ J5                                  200.000000    1
+ J6                                  150.000000    1
+ J7                                    0.000000    1
+
+[EMITTERS]
+
+[STATUS]
+
+[PATTERNS]
+ 3                                     0.5000       0.7500       1.0000       0.2000
+ pr3                                   0.1200       0.2000       0.3000       0.4000
+ 1                                     0.5000       0.1000       2.3000       2.0000       0.8000       2.5000
+ 1                                     1.0000       1.2000       1.3000       0.5000       2.0000       1.3000
+ 1                                     3.0000       2.2000       1.2000       2.0000       0.3000       1.1000
+ 1                                     1.2000       2.0000       0.4500       1.1000       2.0000       2.0000
+
+[CURVES]
+ pm1                                 600.0000     150.0000
+ ef2                                   0.0000      40.0000
+ ef2                                 100.0000      52.2222
+ ef2                                 200.0000      62.2222
+ ef2                                 300.0000      70.0000
+ ef2                                 400.0000      75.5556
+ ef2                                 500.0000      78.8889
+ ef2                                 600.0000      80.0000
+ ef2                                 700.0000      78.8889
+ ef2                                 800.0000      75.5556
+ ef2                                 900.0000      70.0000
+ ef2                                1000.0000      62.2222
+ ef2                                1100.0000      52.2222
+ ef2                                1200.0000      40.0000
+ pm2                                 700.0000     250.0000
+ pm3                                   0.0000     295.2756
+ pm3                                 475.5112     229.6588
+ pm3                                 792.5186      98.4252
+ pm4                                   0.0000     393.7008
+ pm4                                 475.5112     360.8924
+ pm4                                1109.5261      98.4252
+
+[CONTROLS]
+ LINK PU9 1.0000 AT TIME 0.0000 HOURS
+
+[QUALITY]
+
+[SOURCES]
+
+[MIXING]
+ T8                              MIXED          1.0000
+
+[REACTIONS]
+ ORDER  BULK            1.00
+ ORDER  WALL            1
+ ORDER  TANK            1.00
+ GLOBAL BULK            0.000000
+ GLOBAL WALL            0.000000
+
+[ENERGY]
+ GLOBAL PRICE        0.5000
+ GLOBAL PATTERN      pr3
+ GLOBAL EFFIC        75.0000
+ DEMAND CHARGE       0.0000
+ PUMP PU9                             PATTERN pr3
+ PUMP PU9                             EFFIC   ef2
+
+[TIMES]
+ DURATION            72:00:00
+ HYDRAULIC TIMESTEP  1:00:00
+ QUALITY TIMESTEP    0:05:00
+ REPORT TIMESTEP     1:00:00
+ REPORT START        0:00:00
+ PATTERN TIMESTEP    1:00:00
+ PATTERN START       0:00:00
+ RULE TIMESTEP       0:06:00
+ START CLOCKTIME     0:00:00
+ STATISTIC           NONE
+
+[OPTIONS]
+ UNITS               GPM
+ PRESSURE            PSI
+ HEADLOSS            H-W
+ PATTERN             1
+ UNBALANCED          CONTINUE 10
+ QUALITY             NONE
+ DEMAND MULTIPLIER   1.0000
+ EMITTER EXPONENT    0.5000
+ VISCOSITY           1.000000
+ DIFFUSIVITY         1.000000
+ SPECIFIC GRAVITY    1.000000
+ TRIALS              40
+ ACCURACY            0.00001000
+ TOLERANCE           0.01000000
+ CHECKFREQ           2
+ MAXCHECK            10
+ DAMPLIMIT           0.00000000
+
+[REPORT]
+ PAGESIZE            0
+ STATUS              FULL
+ SUMMARY             NO
+ ENERGY              NO
+ MESSAGES            YES
+ NODES               NONE
+ LINKS               NONE
+ Elevation           NO
+ Demand              PRECISION 2
+ Head                PRECISION 2
+ Pressure            PRECISION 2
+ Quality             NO
+ Length              NO
+ Diameter            NO
+ Flow                PRECISION 2
+ Velocity            PRECISION 2
+ Headloss            PRECISION 2
+ Quality             NO
+ State               NO
+ Setting             NO
+ Reaction            NO
+
+
+
+[COORDINATES]
+ J2                                 1206.350000    7238.100000
+ J3                                 2309.520000    7238.100000
+ J4                                 2309.520000    6484.130000
+ J5                                 2309.520000    5730.160000
+ J6                                 3833.330000    6484.130000
+ J7                                 3833.330000    7238.100000
+ R1                                  404.760000    7238.100000
+ T8                                 5063.490000    7238.100000
+
+[TAGS]
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+ P7              	3000.00         	5825.40         
+ P7              	3317.46         	5976.19         
+ P7              	3611.11         	6158.73         
+ P7              	3785.71         	6333.33         
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+ 222.22           7595.24          "Source"                 
+ 714.29           7587.30          "PUMP"                 
+ 4912.70          7571.43          "TANK"                 
+
+[BACKDROP]
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+
+[END]

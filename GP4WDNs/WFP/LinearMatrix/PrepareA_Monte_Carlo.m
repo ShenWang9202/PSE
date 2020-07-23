@@ -5,7 +5,7 @@ multiple_demand = 0.2;
 % pipe uncertainty, 5% around estimated demand value
 % make this as 0.0, when do over determined test, because we need to fix
 % the other uncertainty when dealing with demand uncertainty.
-multiple_pipe_coefficient = 0.1;
+multiple_pipe_coefficient = 0.05;
 % the accuracy of sensor are 1%
 accuracy = 0.01;
 
@@ -103,8 +103,13 @@ for i = 1:JunctionCount
         multiplier = [multiplier 0];
     end
 end
+% using norm distribution
+[demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand(Demand_known, MC_times, NodeJunctionIndex, multiple_demand, flowConverter);
+% using uniform distribution
+[demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_uniform(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
+% using laplace distribution
+[demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_lap(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
 
-[demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand(Demand_known, MC_times, NodeJunctionIndex, multiple_demand);
 [Coefficient_MC, CoeffVariance] = GenerateMCCoefficient(PipeRoughness, MC_times, multiple_pipe_coefficient);
 
 TankInitialLevel = d.getNodeTankInitialLevel;

@@ -1,11 +1,11 @@
-function [D_uncer,DemandIndex,Variance]=GenerateMCDemand(demand,MC_times,HeadIndex,multiple)
+function [D_uncer,DemandIndex,Variance] = GenerateMCDemand(demand,MC_times,HeadIndex,multiple,flowConverter)
 [~,n]=size(demand);
 D_uncer=zeros(MC_times,n);
 DemandIndex = [];
 Variance = [];
 for i = 1:n
     mu = demand(i);
-    sigma = multiple*mu/2.576;
+    sigma = multiple*mu/2.576*flowConverter; % flowConverter is for LPS inp files. demand will convert later.
     if(mu~=0)
         r = normrnd(mu,sigma,[1,MC_times]);
         D_uncer(:,i) = r';  
