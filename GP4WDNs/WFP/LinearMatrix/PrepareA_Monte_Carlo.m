@@ -110,7 +110,7 @@ end
 %    [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_uniform(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
 
 % using laplace distribution
-%  [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_lap(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
+  [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_lap(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
 
 [Coefficient_MC, CoeffVariance] = GenerateMCCoefficient(PipeRoughness, MC_times, multiple_pipe_coefficient);
 
