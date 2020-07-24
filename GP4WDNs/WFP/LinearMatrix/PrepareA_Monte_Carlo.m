@@ -1,7 +1,7 @@
 function [d, IndexInVar, InitialParameter, ForConstructA, ForConstructb, Variable_Symbol_Table, Solution, MassEnergyMatrix4GP, MC] = PrepareA_Monte_Carlo(inpname, TestCase)
 MC_times = 1000;
 % demand uncertainty, 10% around estimated demand value
-multiple_demand = 0.05;
+multiple_demand = 0.2;
 % pipe uncertainty, 5% around estimated demand value
 % make this as 0.0, when do over determined test, because we need to fix
 % the other uncertainty when dealing with demand uncertainty.
@@ -107,7 +107,7 @@ end
 [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand(Demand_known, MC_times, NodeJunctionIndex, multiple_demand, flowConverter);
 
 % using uniform distribution
-%   [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_uniform(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
+%    [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_uniform(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
 
 % using laplace distribution
 %  [demand_MC, DemandIndex, DemandVariance] = GenerateMCDemand_lap(Demand_known, MC_times, NodeJunctionIndex, multiple_demand,flowConverter);
