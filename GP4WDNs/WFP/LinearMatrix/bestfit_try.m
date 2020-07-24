@@ -7,8 +7,8 @@
 % sigma = 0.1*mu;
 % MC_times = 1000;
 % x = normrnd(mu,sigma,[1,MC_times]);
-% F= fitmethis(x);
-% 
+% % F= fitmethis(x);
+% % 
 % F=fitdist(x','Normal');
 
 
@@ -86,7 +86,7 @@ for i = DemandIndex
     F=fitdist(x','Normal');
     variance = (F.sigma)^2;
     Variance_MonteCarlo_d = [Variance_MonteCarlo_d;variance];
-     mu_MonteCarlo_d = [mu_MonteCarlo_d;F.mu];
+    mu_MonteCarlo_d = [mu_MonteCarlo_d;F.mu];
 end
 
 

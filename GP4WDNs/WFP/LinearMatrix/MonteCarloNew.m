@@ -3,7 +3,7 @@
 clc;
 clear;
 close all;
-TestCase = 21 ;% 4 1 17 5 23  21 18
+TestCase = 4 ;% 4 1 17 5 23  21 18
 tic
 [inpname, acc] = findInp_acc(TestCase);
 [d,IndexInVar,InitialParameter,ForConstructA,ForConstructb,Variable_Symbol_Table,Solution,MassEnergyMatrix4GP,MC] = PrepareA_Monte_Carlo(inpname,TestCase);
@@ -75,7 +75,7 @@ toc
 relativeError = zeros(size_m,size_n);
 for i = 1:size_m
     abserror = abs(Sigma_error);
-    if(Sigma_MC(i) < 0.2)
+    if(Sigma_MC(i) < 0.1)
         relativeError(i) = 0;
     else
         relativeError(i) = abserror(i)/Sigma_MC(i)*100;
@@ -83,4 +83,5 @@ for i = 1:size_m
     
 end
 PlotErrorDistributionforCTown_Variance(abs(relativeError))
+mean(relativeError)
 
