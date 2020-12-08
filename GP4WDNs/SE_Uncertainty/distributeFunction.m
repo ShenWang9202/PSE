@@ -1,24 +1,19 @@
 close all;
 mu = 200;
 sigma = 5;
-x = mu+ (-20:1:20)
-y = normpdf(x,mu,sigma*sqrt(2))
-plot(x,y)
-hold on
-x = mu-50+ (-20:1:20)
-y1 = normpdf(x,mu-50,sigma)
+figure
+x = mu + (-20:1:20)
+y1 = normpdf(x,mu,sigma)
 plot(x,y1)
-
 hold on
+
 x = mu+50+ (-20:1:20)
 y2 = normpdf(x,mu+50,sigma)
 plot(x,y2)
-y3 = conv(y1,y2);
 
-hold on 
-mu = 200;
-x = mu+ (-20:1:20)
-plot(x,y3);
+y3 = conv(y1,y2);
+figure
+plot(y3);
 
 pd = makedist('Normal','mu',mu,'sigma',sigma);
 
@@ -36,4 +31,6 @@ z = normrnd(82.5,5.04,1000,1);
 sumR = x-y-z;
 mean(sumR), sqrt(var(sumR))
 
+
+Demo_dMATLAC.m
 

@@ -3,7 +3,7 @@
 clc;
 clear;
 close all;
-TestCase = 18 ;% 1 4 5 17 18 21 23
+TestCase = 1;% 1 4 5 17 18 21 23
 tic
 [inpname, acc] = findInp_acc(TestCase);
 [d,IndexInVar,InitialParameter,ForConstructA,ForConstructb,Variable_Symbol_Table,Solution,MassEnergyMatrix4GP,MC] = PrepareA_Monte_Carlo(inpname,TestCase);
@@ -30,6 +30,18 @@ Variance = DemandVariance; % compatible with previous code when only considering
 ID_Index = Variable_Symbol_Table(:,1);
 save('MonteCarloDemand.mat','DemandIndex','demand_MC','-v7');
 save('MonteCarloData.mat','deterministic','HeadIndex','FlowIndex','ID_Index','MCSolution','DemandVariance','CoeffVariance','-v7');
+
+%% summation of abs error of the deterministic
+
+meanofMC = mean(MC.MCSolution,2);
+if(~isempty(IndexInVar.PumpSpeedIndex))
+    deterministic = Solution(1:IndexInVar.PumpSpeedIndex(1)-1);
+else
+    deterministic = Solution
+end
+error = deterministic - meanofMC;
+ 
+ave = sum(abs(error))/size(error,1)
 
 %% plot
 
@@ -85,4 +97,7 @@ end
 
 PlotErrorDistributionforCTown_Variance(abs(relativeError))
 mean(relativeError)
+ave
+
+
 
