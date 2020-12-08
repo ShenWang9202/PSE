@@ -18,6 +18,7 @@ AnalycalDistribution_MC_over_pipe.m is considered an over-determined scenario an
 
 AnalycalDistribution_Kxx.m means we are using the second version of our derived formula, which is much easier to understand and the no need to construct Vech(Kxx).
 
+# Note
 Note that for PES1 Network and BAK network, their unit system is based on LPS. So when you Linearize Pipes or Pumps, Headloss_pipe_R should be 10.66 instead of 4.727; Please be careful to convert unit, otherwise, the covariance result is wrong even no error or warnings pop out.
 
-As for?how to obtain \textit{(i)}  the probability density function of the linear combinations of independent random variables with different (known or unknown) distributions and (ii) its corresponding confidence interval numerically, please see PSE/tests/PDF_Sum_Random_Var.m file.
+As for how to obtain (i) the probability density function of the linear combinations of independent random variables with different (known or unknown) distributions and (ii) its corresponding confidence interval numerically, please see PSE/tests/PDF_Sum_Random_Var.m file.
